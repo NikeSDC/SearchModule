@@ -1,0 +1,33 @@
+{
+  "name": "header--matthew",
+  "version": "1.0.0",
+  "description": "Header and possibly footer",
+  "main": "./server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Just-Do-It-41/header--Matthew.git"
+  },
+  "author": "Matthew Starcher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Just-Do-It-41/header--Matthew/issues"
+  },
+  "homepage": "https://github.com/Just-Do-It-41/header--Matthew#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1"
+  }
+}
