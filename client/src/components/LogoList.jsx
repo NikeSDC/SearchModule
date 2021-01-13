@@ -1,10 +1,12 @@
 import React from 'react';
-import Jordan from './Jordan.jsx';
+// import Jordan from './Jordan.jsx';
+import Converse from './Converse.jsx';
 
 let LogoList = () => (
   <div className="logoListContainer">
     <ul>
-      <Jordan />
+      Wtf mate
+     <Converse />
     </ul>
   </div>
 )
