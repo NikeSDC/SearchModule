@@ -6,7 +6,6 @@ let LogoList = () => (
   <div className="pre-l-brand-header">
     <Jordan />
     <Converse />
-    <p>Test the Branch</p>
   </div>
 )
 
