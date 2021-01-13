@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./client/src/components/Converse.jsx":
+/*!********************************************!*\
+  !*** ./client/src/components/Converse.jsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar Converse = function Converse() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"li\", {\n    className: \"pre-brand-item\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"a\", {\n    \"aria-label\": \"Converse\",\n    \"data-type\": \"click_navBrandBar\",\n    \"data-path\": \"Converse\",\n    className: \"pre-brand-item d-sm-ib prl3-sm\",\n    href: \"https://www.nike.com/w/converse-shoes-akmjxzy7ok\",\n    \"data-pre\": \"ILink\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"svg\", {\n    height: \"24px\",\n    width: \"24px\",\n    fill: \"#111\",\n    viewBox: \"0 0 39 33\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"path\", {\n    d: \"M10.94 25.626l-4.236-5.501L.201 22.28l3.734-5.756L.11 10.777l6.59 2.031 4.026-5.474.14 6.785 6.64 2.175-6.594 2.446.028 6.886zm.824 7.239l13.952-16.393L11.806.107h11.697l14.871 16.389-14.8 16.369h-11.81z\"\n  })))));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Converse);\n\n//# sourceURL=webpack://header--matthew/./client/src/components/Converse.jsx?");
+
+/***/ }),
+
 /***/ "./client/src/components/Header.jsx":
 /*!******************************************!*\
   !*** ./client/src/components/Header.jsx ***!
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Jordan_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Jordan.jsx */ \"./client/src/components/Jordan.jsx\");\n\n\n\nvar LogoList = function LogoList() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"ul\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Jordan_jsx__WEBPACK_IMPORTED_MODULE_1__.default, null)));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LogoList);\n\n//# sourceURL=webpack://header--matthew/./client/src/components/Logolist.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Jordan_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Jordan.jsx */ \"./client/src/components/Jordan.jsx\");\n/* harmony import */ var _Converse_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Converse.jsx */ \"./client/src/components/Converse.jsx\");\n\n\n\n\nvar LogoList = function LogoList() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Jordan_jsx__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Converse_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LogoList);\n\n//# sourceURL=webpack://header--matthew/./client/src/components/Logolist.jsx?");
 
 /***/ }),
 
