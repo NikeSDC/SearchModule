@@ -1,20 +1,21 @@
 import React from 'react';
+
 import LogoList from './Logolist.jsx';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state
+    this.state = {};
   }
 
   render() {
     return (
-      <div className="header-wrapper">
-        <div className="pre-l-brand-header z3">
+      <div className="headerContainer">
+        <div className="prebrandHeader z3">
           <LogoList />
         </div>
       </div>
-    )
+    );
   }
 }
 

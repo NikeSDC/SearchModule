@@ -28,7 +28,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+.body {
 	line-height: 1;
 }
 ol, ul {
@@ -47,7 +47,26 @@ table {
 	border-spacing: 0;
 }
 
-.header-wrapper {
+/* End Reset */
+
+body {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #111;
+  background-color: #fff;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.headerContainer {
   margin: 0;
   padding: 0;
   border: 0;
@@ -67,29 +86,73 @@ table {
   z-index: 3;
 }
 
-.pre-l-brand-header {
+.prebrandHeader {
   position: relative;
   background: #f5f5f5;
   height: 36px;
   width: 100%;
   justify-content: space-between;
   max-width: 1920px;
-  padding: 0 14px 0 16px;
+  padding: 0 38px 0 36px;
   opacity: 1;
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
 }
 
 .logoListContainer {
-  display: flex;
+  /* display: flex; */
   list-style: none;
+  box-sizing: border-box;
+  /* margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+  padding-inline-start: 4px;
+  padding-top: 6px;
+  /* height: 34px;
+  width: 96px; */
+}
+
+.ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
   box-sizing: border-box;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 40px;
+}
+
+.headerLogo {
+  display: inline;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  /* background: transparent; */
+  padding-right: 12px;
+  padding-left: 12px;
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 8px;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 /*
 @media only screen and (min-width: 1024px)
