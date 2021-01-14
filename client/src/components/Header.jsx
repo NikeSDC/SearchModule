@@ -1,4 +1,5 @@
 import React from 'react';
+import NavSelectors from './NavSelectors.jsx';
 
 import LogoList from './Logolist.jsx';
 
@@ -13,6 +14,7 @@ class Header extends React.Component {
       <div className="headerContainer">
         <div className="prebrandHeader z3">
           <LogoList />
+          <NavSelectors />
         </div>
       </div>
     );
