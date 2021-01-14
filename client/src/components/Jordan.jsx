@@ -13,4 +13,4 @@ let Jordan = () => (
   </div>
 )
 
-export default Jordan
+export default Jordan;
