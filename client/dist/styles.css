@@ -49,7 +49,7 @@ table {
 
 /* End Reset */
 
-body {
+.headerBody {
   font-size: inherit;
   line-height: inherit;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -61,8 +61,9 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  /* font-size: 100%; */
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #111;
   vertical-align: baseline;
 }
 
@@ -109,14 +110,8 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   /* display: flex; */
   list-style: none;
   box-sizing: border-box;
-  /* margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px; */
   padding-inline-start: 4px;
   padding-top: 6px;
-  /* height: 34px;
-  width: 96px; */
 }
 
 .ul {
@@ -154,14 +149,43 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   vertical-align: baseline;
   box-sizing: border-box;
 }
-/*
-@media only screen and (min-width: 1024px)
-.d-lg-b {
-    display: block;
+
+.userMenu {
+  width: 177.156px;
+  height: 36px;
+  display: inline;
+  padding-top: 9px;
+  /* position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0; */
 }
 
-@media only screen and (min-width: 1024px)
-.pre-l-brand-header:after, .pre-l-brand-header:before {
-    content: "";
-    opacity: 0;
-} */
+.userMenuButton {
+  font-size: 12px;
+  padding: 4px 8px;
+  text-decoration: none;
+}
+
+.userMenuButton a {
+  text-decoration: none;
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 450;
+}
+
+.separator {
+  font-size: 12px;
+  /* padding: 4px 8px; */
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.333333;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+.displayInline {
+  display: inline;
+}
+
