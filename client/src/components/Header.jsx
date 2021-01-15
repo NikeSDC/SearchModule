@@ -2,6 +2,7 @@ import React from 'react';
 import NavSelectors from './NavSelectors.jsx';
 
 import LogoList from './Logolist.jsx';
+import Swoosh from './Swoosh.jsx';
 
 class Header extends React.Component {
   constructor(props) {
@@ -16,6 +17,11 @@ class Header extends React.Component {
           <LogoList />
           <NavSelectors />
         </div>
+
+        <div>
+          <Swoosh />
+        </div>
+
       </div>
     );
   }
