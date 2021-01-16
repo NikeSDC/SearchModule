@@ -267,3 +267,47 @@ table {
   transition: border-color .1s,color .1s;
   display: inline-block;
 }
+
+.likeCartContainer {
+  /* padding-top: 2px; */
+  /* display: inline-block; */
+  box-sizing: border-box;
+  position: absolute;
+  right: 3.4%;
+  top: 13.2%;
+
+  /* bottom: 10%; */
+}
+
+.heartIcon {
+  overflow: hidden;
+  transform: translateZ(0);
+  vertical-align: middle;
+  background: transparent;
+  flex: 0 0 auto;
+  color: rgba(0,0,0,.54);
+  padding: 6px;
+  text-align: center;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  margin-right: 14px;
+  /* text-decoration: none;
+  font-weight: 500; */
+}
+
+.cartIcon {
+  text-align: right;
+  /* padding-top: 12px; */
+  margin: 0;
+  padding-left: 4px;
+  border: 0;
+  vertical-align: middle;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  /* top: 4%;
+  left: 87%; */
+  box-sizing: border-box;
+}
