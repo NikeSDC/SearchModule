@@ -5,6 +5,7 @@ import LogoList from './Logolist.jsx';
 import Swoosh from './Swoosh.jsx';
 import MenuSelectorsList from './MenuSelectorsList.jsx';
 import LikeCartContainer from './LikeCart/LikeCartContainer.jsx';
+import Search from './Search.jsx';
 
 class Header extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Header extends React.Component {
         <div className="menuWrapper">
           <Swoosh />
           <MenuSelectorsList />
+          <Search />
           <LikeCartContainer />
         </div>
 
