@@ -196,12 +196,11 @@ table {
 }
 
 .menuSelectorBox {
-  /* bottom: inherit; */
   position: absolute;
-  width: 80%;
-  right: 44px;
+  /* right: 42px; */
   top: 5%;
-  left: 8%;
+  left: 8.4%;
+  width: 80%;
   -webkit-box-flex: 1;
   flex-grow: 1;
   margin: 0;
@@ -209,7 +208,6 @@ table {
   border: 0;
   font-size: 100%;
   font: inherit;
-  /* vertical-align: baseline; */
   box-sizing: border-box;
   display: block;
 }
@@ -240,8 +238,8 @@ table {
   border-bottom: 2px solid transparent;
   padding-top: 16px;
   padding-bottom: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
   transition: border-color .1s,color .1s;
   display: inline-block;
 }
@@ -370,17 +368,25 @@ table {
 
 
 .likeCartContainer {
+<<<<<<< HEAD
   padding-top: 12px;
   text-align: right;
   display: inline-block;
   -webkit-box-flex: 0;
   flex-grow: 0;
+=======
+>>>>>>> main
   box-sizing: border-box;
   width: 6.563%;
   height: 16.67%;
   position: absolute;
+<<<<<<< HEAD
   left: 90%;
   top: 10.3%;
+=======
+  right: 3.4%;
+  top: 13.2%;
+>>>>>>> main
 }
 
 .heartIcon {
@@ -396,6 +402,7 @@ table {
   cursor: pointer;
   align-items: center;
   margin-right: 14px;
+<<<<<<< HEAD
   /* position: absolute;
   top: 0%;
   left: 0%; */
@@ -403,13 +410,24 @@ table {
 
 .cartIcon {
   /* text-align: right; */
+=======
+}
+
+.cartIcon {
+  text-align: right;
+>>>>>>> main
   margin: 0;
   padding-left: 4px;
   border: 0;
   vertical-align: middle;
   display: inline-block;
   box-sizing: border-box;
+<<<<<<< HEAD
   /* position: relative;
   top: 0%;
   left: 50%; */
+=======
+  position: relative;
+  box-sizing: border-box;
+>>>>>>> main
 }
