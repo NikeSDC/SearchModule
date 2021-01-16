@@ -50,8 +50,6 @@ table {
 /* End Reset */
 
 .headerBody {
-  font-size: inherit;
-  line-height: inherit;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #111;
   background-color: #fff;
@@ -72,10 +70,9 @@ table {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   height: 96px;
   width: 100%;
-  /* vertical-align: baseline; */
   box-sizing: border-box;
   display: block;
   color: #111;
@@ -110,7 +107,6 @@ table {
 }
 
 .logoListContainer {
-  /* display: flex; */
   list-style: none;
   box-sizing: border-box;
   padding-inline-start: 4px;
@@ -123,8 +119,7 @@ table {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
-  /* vertical-align: baseline; */
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   box-sizing: border-box;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -138,7 +133,6 @@ table {
   align-items: center;
   height: 100%;
   width: 100%;
-  /* background: transparent; */
   padding-right: 12px;
   padding-left: 12px;
   color: #111;
@@ -149,7 +143,7 @@ table {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   vertical-align: baseline;
   box-sizing: border-box;
 }
@@ -159,10 +153,6 @@ table {
   height: 36px;
   display: inline;
   padding-top: 9px;
-  /* position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0; */
 }
 
 .userMenuButton {
@@ -181,7 +171,6 @@ table {
 
 .separator {
   font-size: 12px;
-  /* padding: 4px 8px; */
   margin-left: 4px;
   margin-right: 4px;
   line-height: 1.333333;
@@ -214,16 +203,14 @@ table {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
-  /* padding: 0px 48px; */
 }
 
 .menuSelectorBox {
-  /* bottom: inherit; */
   position: absolute;
-  width: 80%;
-  right: 44px;
+  /* right: 42px; */
   top: 5%;
-  left: 8%;
+  left: 8.4%;
+  width: 80%;
   -webkit-box-flex: 1;
   flex-grow: 1;
   margin: 0;
@@ -231,7 +218,6 @@ table {
   border: 0;
   font-size: 100%;
   font: inherit;
-  /* vertical-align: baseline; */
   box-sizing: border-box;
   display: block;
 }
@@ -262,21 +248,17 @@ table {
   border-bottom: 2px solid transparent;
   padding-top: 16px;
   padding-bottom: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
   transition: border-color .1s,color .1s;
   display: inline-block;
 }
 
 .likeCartContainer {
-  /* padding-top: 2px; */
-  /* display: inline-block; */
   box-sizing: border-box;
   position: absolute;
   right: 3.4%;
   top: 13.2%;
-
-  /* bottom: 10%; */
 }
 
 .heartIcon {
@@ -293,13 +275,10 @@ table {
   position: relative;
   align-items: center;
   margin-right: 14px;
-  /* text-decoration: none;
-  font-weight: 500; */
 }
 
 .cartIcon {
   text-align: right;
-  /* padding-top: 12px; */
   margin: 0;
   padding-left: 4px;
   border: 0;
@@ -307,7 +286,5 @@ table {
   display: inline-block;
   box-sizing: border-box;
   position: relative;
-  /* top: 4%;
-  left: 87%; */
   box-sizing: border-box;
 }

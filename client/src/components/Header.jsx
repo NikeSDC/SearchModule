@@ -14,7 +14,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="headerContainer headerBody">
+      <div className="headerContainer">
         <div className="prebrandHeader z3">
           <LogoList />
           <NavSelectors />
