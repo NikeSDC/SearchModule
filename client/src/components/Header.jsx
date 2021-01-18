@@ -6,6 +6,7 @@ import Swoosh from './Swoosh.jsx';
 import MenuSelectorsList from './MenuSelectorsList.jsx';
 import LikeCartContainer from './LikeCart/LikeCartContainer.jsx';
 import Search from './Search.jsx';
+import Banner from './Banner/Banner.jsx';
 
 class Header extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Header extends React.Component {
           <Search />
           <LikeCartContainer />
         </div>
-
+        <Banner />
       </div>
     );
   }
