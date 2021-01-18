@@ -27,9 +27,8 @@ class Header extends React.Component {
           <MenuSelectorsList />
           <Search />
           <LikeCartContainer />
-          <Banner />
         </div>
-
+        <Banner />
       </div>
     );
   }
