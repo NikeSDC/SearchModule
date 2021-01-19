@@ -4,7 +4,7 @@ const Banner = () => (
   <div className="d-lg-b">
     <div className="banner-container css-1dixged">
       <div className="banner-carousel-wrapper css-196tcw2 css-1yoeq20">
-        <div className="css-kswtif" data-orientation="horizontal" data-hero="true" data-slides-to-show="1" data-scrollable="false" data-should-transition="true" data-semantically-hide-unobserved-cards="true" data-conditionally-hide-nav-buttons="false" data-with-tracker="false" data-with-navigation="true" autoplay="" id="">
+        <div className="css-kswtif" data-orientation="horizontal" data-hero="true" data-slides-to-show="1" data-scrollable="false" data-should-transition="true" data-semantically-hide-unobserved-cards="true" data-conditionally-hide-nav-buttons="false" data-with-tracker="false" data-with-navigation="true" autoPlay="" id="">
           <ul className="slider">
             <li aria-hidden="true" data-in-view="false" data-index="0" className="slide">
               <div className="banner-node css-gb9zhi">

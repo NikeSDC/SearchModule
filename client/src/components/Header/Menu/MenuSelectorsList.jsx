@@ -1,11 +1,11 @@
 import React from 'react';
 
-import NewReleases from './menuItems/NewReleases.jsx';
-import Men from './menuItems/Men.jsx';
-import Women from './menuItems/Women.jsx';
-import Kids from './menuItems/Kids.jsx';
-import Customize from './menuItems/Customize.jsx';
-import Sale from './menuItems/Sale.jsx';
+import NewReleases from './MenuItems/NewReleases.jsx';
+import Men from './MenuItems/Men.jsx';
+import Women from './MenuItems/Women.jsx';
+import Kids from './MenuItems/Kids.jsx';
+import Customize from './MenuItems/Customize.jsx';
+import Sale from './MenuItems/Sale.jsx';
 
 const MenuSelectorsList = () => (
   <div className="menuSelectorBox">
