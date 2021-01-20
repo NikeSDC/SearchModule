@@ -38,17 +38,17 @@ p {
   margin-inline-end: 0px;
 }
 
+/* a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+} */
+
 a {
   color: #111;
   cursor: pointer;
   text-decoration: none;
   font-weight: 500;
-}
-
-a:-webkit-any-link {
-  color: -webkit-link;
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 div {
@@ -61,7 +61,6 @@ li {
 
 ul {
   display: block;
-  list-style-type: disc;
   /* margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -123,7 +122,6 @@ button {
   box-sizing: inherit;
   }
 /* End Nike reset */
-
 
 /* Pre-l-header-container (Holds entire header)*/
 .pre-l-header-container {
@@ -232,12 +230,238 @@ button {
 }
 /* End Pre header Icon anchor */
 
+/* Begin Nav bar container (pre desktop usermenu) */
 
-/* HEADER (contains swoosh icon, usermenu, search, like and cart icons */
+@media only screen and (min-width: 640px) {
+  .d-md-flx {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+  }
+  .flx-dir-md-r {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+/* End Nav bar container (pre desktop usermenu) */
+
+/* Begin Help Dropdown container */
+@media only screen and (min-width: 1024px) {
+  .d-lg-flx {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .flx-ai-md-c {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+  }
+}
+/* End Help Dropdown container */
+
+/* Begin pre help dropdown */
+.pre-l-logo {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s,visibility 0s;
+}
+.pre-help-dropdown {
+  height: 100%;
+}
+/* End pre help dropdown */
+
+/* Begin pre drop down menu */
+.pre-help-dropdown>.pre-dropdown-menu {
+  display: flex;
+  align-items: center;
+}
+.pre-dropdown-menu {
+  position: relative;
+  height: 100%;
+}
+/* End pre drop down menu */
+
+/* Begin pre-help button */
+.pre-help-dropdown .pre-help-button, .pre-help-dropdown .pre-help-dropdown-menu-item:hover {
+  color: #111;
+}
+.pre-help-dropdown a, .pre-help-dropdown button {
+  padding: 4px 8px;
+}
+.u-bold {
+  font-weight: 500;
+}
+.body-4 {
+  font-size: 12px;
+  line-height: 1.333333;
+}
+.base-font, .body-1, .body-2, .body-3, .body-4, .headline-1, .headline-2, .headline-3, .headline-4, .headline-5, .responsive-body-2-1, .responsive-body-3-2 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+/* End pre-help button */
+
+/* Begin Help Menu Dropdown MenuBox */
+.pre-help-dropdown .pre-dropdown-menu-box {
+  position: absolute;
+  top: 36px;
+}
+.pre-dropdown-menu-box {
+  position: absolute;
+  min-width: 240px;
+  right: 0;
+  top: 36px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity .2s,visibility 0s linear .2s,transform .25s ease;
+}
+/* End Help Menu Dropdown MenuBox */
+
+/* Begin Help Dropdown styling: */
+.pre-dropdown-menu-content {
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+}
+.pl4-sm {
+  padding-left: 16px;
+}
+.p6-sm {
+  padding: 24px;
+}
+.pre-help-dropdown .pre-help-dropdown-menu-header {
+  font-size: 16px;
+}
+.pre-help-dropdown a, .pre-help-dropdown button {
+  padding: 4px 8px;
+}
+.mb3-sm {
+  margin-bottom: 12px;
+}
+.d-sm-b {
+  display: block;
+}
+/* UL styling */
+.body-3 {
+  font-size: 14px;
+  line-height: 1.428571;
+}
+.base-font, .body-1, .body-2, .body-3, .body-4, .headline-1, .headline-2, .headline-3, .headline-4, .headline-5, .responsive-body-2-1, .responsive-body-3-2 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+/* li */
+.pre-help-dropdown .pre-help-dropdown-menu-item {
+  display: block;
+  color: #757575;
+}
+.pre-help-dropdown a, .pre-help-dropdown button {
+  padding: 4px 8px;
+}
+/* Seperator */
+.pre-help-dropdown+.pre-help-separator {
+  display: block;
+}
+.pre-help-separator {
+  display: none;
+}
+.ml1-sm {
+  margin-left: 4px;
+}
+.mr1-sm {
+  margin-right: 4px;
+}
+.body-4 {
+    font-size: 12px;
+    line-height: 1.333333;
+}
+/* End Help Dropdown styling: */
+
+/* Help dropdown */
+@media only screen and (min-width: 1024px) {
+  .d-lg-flx {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+  }
+}
+.pre-login-btns {
+  padding-right: 2px;
+}
+
 .pre-l-header.top-stack-context {
   z-index: 2;
 }
+@media only screen and (min-width: 1024px) {
+  .d-lg-flx {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .flx-ai-lg-c {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+  }
+}
+/* Join Us */
+.pre-login-btns a, .pre-login-btns button {
+  height: 34px;
+}
+.ml2-sm {
+  margin-left: 8px;
+}
+.mr2-sm {
+  margin-right: 8px;
+}
+.body-4 {
+  font-size: 12px;
+  line-height: 1.333333;
+}
+.u-bold {
+  font-weight: 500;
+}
 
+/* Begin Login Button */
+.pre-login-btns a, .pre-login-btns button {
+  height: 34px;
+}
+.pre-brand-item a, .pre-brand-item button, .pre-btn-header a, .pre-btn-header button, .pre-desktop-menu a, .pre-desktop-menu button, button.nav-btn, button.pre-link {
+  background: transparent;
+}
+.u-bold {
+  font-weight: 500;
+}
+.p0-sm {
+  padding: 0;
+}
+.ml2-sm {
+  margin-left: 8px;
+}
+.mr2-sm {
+  margin-right: 8px;
+}
+.body-4 {
+  font-size: 12px;
+  line-height: 1.333333;
+}
+/* End Login Button */
+
+
+/* HEADER (contains swoosh icon, usermenu, search, like and cart icons */
 .pre-l-header {
   background: #fff;
   position: relative;
@@ -274,7 +498,6 @@ button {
 /* End Swoosh anchor */
 
 /* User Menu Wrapper */
-
 .pre-l-nav-box {
   width: 120px;
   right: 44px;
@@ -380,11 +603,10 @@ padding-top: 8px;
   position: relative;
 }
 
-
+/*
 .mr2-sm {
-  /* margin-right: 8px; */
   margin-right: 0;
-}
+} */
 
 .d-sm-ib {
   display: inline-block;
