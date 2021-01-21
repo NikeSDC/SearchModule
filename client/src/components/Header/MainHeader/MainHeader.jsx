@@ -12,9 +12,11 @@ const MainHeader = () => (
       <div className="pre-l-wrapper maut-sm d-sm-flx">
         <Swoosh />
         <div className="pre-l-nav-box flx-gro-sm-1">
-          {/* <PreMobileMenu /> */}
-          <PreDesktopMenu />
-          <Search />
+          <nav className="pre-l-nav">
+            {/* <PreMobileMenu /> */}
+            <PreDesktopMenu />
+          </nav>
+        <Search />
         </div>
         <LikeCart />
       </div>

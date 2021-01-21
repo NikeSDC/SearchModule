@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Swoosh = () => (
-  <div className="pre-l-logo prl0-sm top-stack-conten">
+  <div className="pre-l-logo prl0-sm top-stack-context">
     <a aria-label="Nike Home Page" data-brand="nike" data-type="click_headerLogo" data-path="home" className="d-sm-b prl2-sm prl3-lg" href="https://www.nike.com" data-pre="ILink">
       <span className="d-sm-h">Nike Home Page</span>
       <svg className="pre-logo-svg" height="60px" width="60px" fill="#111" viewBox="0 0 69 32">

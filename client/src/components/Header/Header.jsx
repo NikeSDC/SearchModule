@@ -15,6 +15,8 @@ class Header extends React.Component {
         <PreLHeader />
         <MainHeader />
         <div className="pre-spacer"></div>
+        <div className="pre-scrim" data-pre="Scrim"></div>
+        <div id="skip-to-content"></div>
       </div>
     );
   }
