@@ -1,12 +1,41 @@
 import React from 'react';
 
-const NavHelp = () => (
+class NavHelp extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      helpMenuClassName: 'pre-dropdown-menu',
+      ariaExpanded: false,
+    }
+    this.handleShowHelpMenu = this.handleShowHelpMenu.bind(this);
+    this.handleHideHelpMenu = this.handleHideHelpMenu.bind(this);
+  }
+
+  handleShowHelpMenu() {
+    this.setState({
+      helpMenuClassName: 'pre-dropdown-menu is-open',
+      ariaExpanded: true,
+    })
+  }
+
+  handleHideHelpMenu() {
+    this.setState({
+      helpMenuClassName: 'pre-dropdown-menu',
+      ariaExpanded: false,
+    })
+  }
+
+  render() {
+    return (
   <div className="flx-dir-r flx-ai-md-c d-lg-flx" data-var="helpDropdown">
     <div className="pre-help-dropdown pre-l-logo" data-pre="DesktopHelpDropdown">
-      <div id="HelpMenuDropdown" className="pre-dropdown-menu" data-pre="DropdownMenu">
+      <div id="HelpMenuDropdown"
+        onMouseOver={this.handleShowHelpMenu}
+        onMouseLeave={this.handleHideHelpMenu}
+        className={this.state.helpMenuClassName} data-pre="DropdownMenu">
         <a
           role="listbox"
-          aria-expanded="false"
+          aria-expanded={this.state.ariaExpanded}
           aria-controls="HelpMenuDropdown-Menu"
           data-var="ctrl"
           aria-label="Help"
@@ -21,7 +50,7 @@ const NavHelp = () => (
         <div id="HelpMenuDropdown-Menu" className="pre-dropdown-menu-box" data-var="content">
           <div className="pre-dropdown-menu-content">
             <nav className="p6-sm pl4-sm">
-              <a role="option" aria-selected="false" target="_self" tabindex="{-1}" data-type="click_navHelpMenuV2" data-path="help" className="pre-help-dropdown-menu-header d-sm-b mb3-sm" href="https://www.nike.com/help" data-pre="ILink">
+              <a role="option" aria-selected="false" target="_self" tabIndex="{-1}" data-type="click_navHelpMenuV2" data-path="help" className="pre-help-dropdown-menu-header d-sm-b mb3-sm" href="https://www.nike.com/help" data-pre="ILink">
                 <span id="hf_header_label_help">Help</span>
               </a>
               <ul className="body-3 z4">
@@ -30,7 +59,7 @@ const NavHelp = () => (
                     role="option"
                     aria-selected="false"
                     target="_self"
-                    tabindex="{-1}"
+                    tabIndex="{-1}"
                     data-type="click_navHelpMenuV2"
                     data-path="help:order status"
                     className="pre-help-dropdown-menu-item body-3 u-bold"
@@ -45,7 +74,7 @@ const NavHelp = () => (
                     role="option"
                     aria-selected="false"
                     target="_self"
-                    tabindex="{-1}"
+                    tabIndex="{-1}"
                     data-type="click_navHelpMenuV2"
                     data-path="help:shipping & delivery"
                     className="pre-help-dropdown-menu-item body-3 u-bold"
@@ -60,7 +89,7 @@ const NavHelp = () => (
                     role="option"
                     aria-selected="false"
                     target="_self"
-                    tabindex="{-1}"
+                    tabIndex="{-1}"
                     data-type="click_navHelpMenuV2"
                     data-path="help:returns"
                     className="pre-help-dropdown-menu-item body-3 u-bold"
@@ -75,7 +104,7 @@ const NavHelp = () => (
                     role="option"
                     aria-selected="false"
                     target="_self"
-                    tabindex="{-1}"
+                    tabIndex="{-1}"
                     data-type="click_navHelpMenuV2"
                     data-path="help:contact us"
                     className="pre-help-dropdown-menu-item body-3 u-bold"
@@ -90,7 +119,7 @@ const NavHelp = () => (
                     role="option"
                     aria-selected="false"
                     target="_blank"
-                    tabindex="{-1}"
+                    tabIndex="{-1}"
                     data-type="click_navHelpMenuV2"
                     data-path="help:privacy policy"
                     className="pre-help-dropdown-menu-item body-3 u-bold"
@@ -105,7 +134,7 @@ const NavHelp = () => (
                     role="option"
                     aria-selected="false"
                     target="_blank"
-                    tabindex="{-1}"
+                    tabIndex="{-1}"
                     data-type="click_navHelpMenuV2"
                     data-path="help:terms of use"
                     className="pre-help-dropdown-menu-item body-3 u-bold"
@@ -120,7 +149,7 @@ const NavHelp = () => (
                     role="option"
                     aria-selected="false"
                     target="_self"
-                    tabindex="{-1}"
+                    tabIndex="{-1}"
                     data-type="click_navHelpMenuV2"
                     data-path="help:send us feedback"
                     className="pre-help-dropdown-menu-item body-3 u-bold"
@@ -138,6 +167,8 @@ const NavHelp = () => (
     </div>
     <span className="pre-help-separator ml1-sm mr1-sm body-4">|</span>
   </div>
-);
+    )
+  }
+};
 
 export default NavHelp;
