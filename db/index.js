@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/nikeSearch', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost/nikeSearch', { useNewUrlParser: true})
   .then(() => console.log('Mongoose is up and at em'))
   .catch((err) => console.error(err));
 
