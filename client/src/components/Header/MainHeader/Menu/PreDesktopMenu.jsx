@@ -5,14 +5,26 @@ class PreDesktopMenu extends React.Component {
     super();
     this.state = {
       ulMenuClassName: 'pre-desktop-menu',
-      newReleaseClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
-      menClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
 
+      newReleaseClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
+      menClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
+      womenClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
+      kidsClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
+      customizeClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
+      saleClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
     }
     this.newReleaseEnter = this.newReleaseEnter.bind(this);
     this.newReleaseLeave = this.newReleaseLeave.bind(this);
     this.menEnter = this.menEnter.bind(this);
     this.menLeave = this.menLeave.bind(this);
+    this.womenEnter = this.womenEnter.bind(this);
+    this.womenLeave = this.womenLeave.bind(this);
+    this.kidsEnter = this.kidsEnter.bind(this);
+    this.kidsLeave = this.kidsLeave.bind(this);
+    this.customizeEnter = this.customizeEnter.bind(this);
+    this.customizeLeave = this.customizeLeave.bind(this);
+    this.saleEnter = this.saleEnter.bind(this);
+    this.saleLeave = this.saleLeave.bind(this);
   }
 
   newReleaseEnter() {
@@ -43,6 +55,61 @@ class PreDesktopMenu extends React.Component {
     })
   }
 
+  womenEnter() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu is-open',
+      womenClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
+    })
+  }
+
+  womenLeave() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu',
+      womenClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+    })
+  }
+
+  kidsEnter() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu is-open',
+      kidsClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
+    })
+  }
+
+  kidsLeave() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu',
+      kidsClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+    })
+  }
+
+  customizeEnter() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu is-open',
+      customizeClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
+    })
+  }
+
+  customizeLeave() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu',
+      customizeClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+    })
+  }
+  saleEnter() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu is-open',
+      saleClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
+    })
+  }
+
+  saleLeave() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu',
+      saleClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+    })
+  }
+
   render() {
     return (
       <div className="pre-l-desktop-menu d-sm-h d-lg-b ta-sm-l ta-lg-c">
@@ -53,8 +120,7 @@ class PreDesktopMenu extends React.Component {
               New Releases
             </a>
             <div id="DesktopMenu-0-0-0"
-            onMouseEnter={this.newReleaseEnter}
-            onMouseLeave={this.newReleaseLeave} className="pre-desktop-menu-dropdown bg-white p10-sm pt4-sm ncss-container" role="menu">
+             className="pre-desktop-menu-dropdown bg-white p10-sm pt4-sm ncss-container" role="menu">
               <div className="pre-columns-container ncss-row">
                 <div className="pre-menu-column pt4-sm ta-sm-l va-sm-t ncss-col-sm-2">
                   <button role="menuitem" aria-label="main-menu, New Releases, New & Featured" tabIndex={-1} data-nav="0,0,0" data-type="click_navShoppingMenu" data-path="new releases:new & featured" className="nav-btn p0-sm pre-menu-item d-sm-h is-static is-header headline-5" data-pre="ILink">
@@ -329,7 +395,8 @@ class PreDesktopMenu extends React.Component {
             </div>
           </div>
         </li>
-          <li className="pre-desktop-menu-item d-lg-ib is-static is-header">
+          <li className={this.state.womenClassName} onMouseEnter={this.womenEnter}
+              onMouseLeave={this.womenLeave}>
             <a aria-label="Women" data-nav="2,0,-1" role="menu" aria-expanded="false" aria-controls="DesktopMenu-0-2-0" data-type="click_navShoppingMenu" data-path="women" className="pre-desktop-menu-link headline-5 prl3-lg pt4-sm d-sm-b no-outline" href="https://www.nike.com/women" data-pre="ILink">
               Women
             </a>
@@ -523,7 +590,8 @@ class PreDesktopMenu extends React.Component {
               </div>
             </div>
           </li>
-          <li className="pre-desktop-menu-item d-lg-ib is-static is-header">
+          <li className={this.state.kidsClassName} onMouseEnter={this.kidsEnter}
+              onMouseLeave={this.kidsLeave}>
             <a aria-label="Kids" data-nav="3,0,-1" role="menu" aria-expanded="false" aria-controls="DesktopMenu-0-3-0" data-type="click_navShoppingMenu" data-path="kids" className="pre-desktop-menu-link headline-5 prl3-lg pt4-sm d-sm-b no-outline" href="https://www.nike.com/kids" data-pre="ILink">
               Kids
             </a>
@@ -732,7 +800,8 @@ class PreDesktopMenu extends React.Component {
               </div>
             </div>
           </li>
-          <li className="pre-desktop-menu-item d-lg-ib d-sm-h is-static is-header">
+          <li className={this.state.customizeClassName} onMouseEnter={this.customizeEnter}
+              onMouseLeave={this.customizeLeave}>
             <a aria-label="Customize" data-nav="4,0,-1" role="menu" aria-expanded="false" aria-controls="DesktopMenu-0-4-0" data-type="click_navShoppingMenu" data-path="customize" className="pre-desktop-menu-link headline-5 prl3-lg pt4-sm d-sm-b no-outline" href="https://www.nike.com/nike-by-you" data-pre="ILink">
               Customize
             </a>
@@ -816,7 +885,8 @@ class PreDesktopMenu extends React.Component {
               </div>
             </div>
           </li>
-          <li className="pre-desktop-menu-item d-lg-ib d-sm-h is-static is-header">
+          <li className={this.state.saleClassName} onMouseEnter={this.saleEnter}
+              onMouseLeave={this.saleLeave}>
             <a aria-label="Sale" data-nav="5,0,-1" role="menu" aria-expanded="false" aria-controls="DesktopMenu-0-5-0" data-type="click_navShoppingMenu" data-path="clearance" className="pre-desktop-menu-link headline-5 prl3-lg pt4-sm d-sm-b no-outline" href="https://www.nike.com/w/sale-3yaep" data-pre="ILink">
               Sale
             </a>
