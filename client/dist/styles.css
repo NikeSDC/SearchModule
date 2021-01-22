@@ -745,20 +745,20 @@ button {
 }
 
 /* Begin menu column */
+.ncss-row {
+  font-size: 0;
+  margin-left: -8px;
+  margin-right: -8px;
+}
 .pre-columns-container {
   max-width: 1344px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 15px;
 }
-.ncss-row {
-  font-size: 0;
-  margin-left: -8px;
-  margin-right: -8px;
-}
 .pre-menu-column {
   display: inline-block;
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateY(-10px);
   transition: transform .1s,opacity .1s;
   transition-delay: 0s;

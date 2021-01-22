@@ -5,11 +5,14 @@ class PreDesktopMenu extends React.Component {
     super();
     this.state = {
       ulMenuClassName: 'pre-desktop-menu',
-      newReleaseClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+      newReleaseClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
+      menClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
 
     }
     this.newReleaseEnter = this.newReleaseEnter.bind(this);
     this.newReleaseLeave = this.newReleaseLeave.bind(this);
+    this.menEnter = this.menEnter.bind(this);
+    this.menLeave = this.menLeave.bind(this);
   }
 
   newReleaseEnter() {
@@ -26,6 +29,20 @@ class PreDesktopMenu extends React.Component {
     })
   }
 
+  menEnter() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu is-open',
+      menClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
+    })
+  }
+
+  menLeave() {
+    this.setState({
+      ulMenuClassName: 'pre-desktop-menu',
+      menClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+    })
+  }
+
   render() {
     return (
       <div className="pre-l-desktop-menu d-sm-h d-lg-b ta-sm-l ta-lg-c">
@@ -37,7 +54,7 @@ class PreDesktopMenu extends React.Component {
             </a>
             <div id="DesktopMenu-0-0-0"
             onMouseEnter={this.newReleaseEnter}
-            onMouseLeave={this.newReleaseLeave} className="pre-desktop-menu-dropdown bg-white p10-sm pt4-sm ncss-container z4" role="menu">
+            onMouseLeave={this.newReleaseLeave} className="pre-desktop-menu-dropdown bg-white p10-sm pt4-sm ncss-container" role="menu">
               <div className="pre-columns-container ncss-row">
                 <div className="pre-menu-column pt4-sm ta-sm-l va-sm-t ncss-col-sm-2">
                   <button role="menuitem" aria-label="main-menu, New Releases, New & Featured" tabIndex={-1} data-nav="0,0,0" data-type="click_navShoppingMenu" data-path="new releases:new & featured" className="nav-btn p0-sm pre-menu-item d-sm-h is-static is-header headline-5" data-pre="ILink">
@@ -116,7 +133,9 @@ class PreDesktopMenu extends React.Component {
               </div>
             </div>
           </li>
-          <li className="pre-desktop-menu-item d-lg-ib is-static is-header">
+          <li className={this.state.menClassName}
+              onMouseEnter={this.menEnter}
+              onMouseLeave={this.menLeave} >
           <a aria-label="Men" data-nav="1,0,-1" role="menu" aria-expanded="false" aria-controls="DesktopMenu-0-1-0" data-type="click_navShoppingMenu" data-path="men" className="pre-desktop-menu-link headline-5 prl3-lg pt4-sm d-sm-b no-outline" href="https://www.nike.com/men" data-pre="ILink">
             Men
           </a>
