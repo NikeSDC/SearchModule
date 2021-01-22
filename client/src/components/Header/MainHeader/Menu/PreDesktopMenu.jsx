@@ -1,8 +1,8 @@
 import React from 'react';
 
 class PreDesktopMenu extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       ulMenuClassName: 'pre-desktop-menu',
 
@@ -28,6 +28,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   newReleaseEnter() {
+    this.props.openScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu is-open',
       newReleaseClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
@@ -35,6 +36,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   newReleaseLeave() {
+    this.props.closeScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu',
       newReleaseClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
@@ -42,6 +44,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   menEnter() {
+    this.props.openScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu is-open',
       menClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
@@ -49,6 +52,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   menLeave() {
+    this.props.closeScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu',
       menClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
@@ -56,6 +60,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   womenEnter() {
+    this.props.openScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu is-open',
       womenClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
@@ -63,6 +68,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   womenLeave() {
+    this.props.closeScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu',
       womenClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
@@ -70,6 +76,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   kidsEnter() {
+    this.props.openScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu is-open',
       kidsClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
@@ -77,6 +84,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   kidsLeave() {
+    this.props.closeScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu',
       kidsClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
@@ -84,6 +92,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   customizeEnter() {
+    this.props.openScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu is-open',
       customizeClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
@@ -91,12 +100,14 @@ class PreDesktopMenu extends React.Component {
   }
 
   customizeLeave() {
+    this.props.closeScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu',
       customizeClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
     })
   }
   saleEnter() {
+    this.props.openScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu is-open',
       saleClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
@@ -104,6 +115,7 @@ class PreDesktopMenu extends React.Component {
   }
 
   saleLeave() {
+    this.props.closeScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu',
       saleClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'

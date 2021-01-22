@@ -1328,6 +1328,11 @@ button, input[type=button], input[type=reset], input[type=submit] {
   right: 0;
   transition: opacity .25s,visibility 0s linear .25s;
 }
+.pre-scrim.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .8s ease,visibility 0s;
+}
 
 /* Begin BANNER */
 @media only screen and (min-width: 1024px) {
