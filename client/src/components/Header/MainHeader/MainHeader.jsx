@@ -6,8 +6,8 @@ import PreDesktopMenu from './Menu/PreDesktopMenu.jsx';
 import Search from './Menu/Search.jsx';
 import LikeCart from './LikeCart/LikeCart.jsx';
 
-const MainHeader = ({ openScrim, closeScrim }) => (
-  <header className="pre-l-header top-stack-context">
+const MainHeader = ({ openScrim, closeScrim, handleVsIsOpen, handleVsIsClosed, headerClassName, closeSearchClassName }) => (
+  <header className={headerClassName}>
     <div>
       <div className="pre-l-wrapper maut-sm d-sm-flx">
         <Swoosh />
@@ -19,8 +19,9 @@ const MainHeader = ({ openScrim, closeScrim }) => (
               closeScrim={closeScrim}/>
           </nav>
         <Search
-          openScrim={openScrim}
-          closeScrim={closeScrim}/>
+          handleVsIsOpen={handleVsIsOpen}
+          handleVsIsClosed={handleVsIsClosed}
+          closeSearchClassName={closeSearchClassName}/>
         </div>
         <LikeCart />
       </div>

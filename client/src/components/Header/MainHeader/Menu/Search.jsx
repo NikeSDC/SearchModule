@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Search = () => (
+const Search = ({ handleVsIsOpen, handleVsIsClosed, closeSearchClassName }) => (
     <div className="pre-l-search" data-pre="VisualSearch">
       <div className="pre-l-search-box">
         <div className="d-sm-flx flx-jc-lg-fe u-position-rel">
           <div className="pre-search-contain">
             <div className="pre-search-input-box d-sm-b flx-dir-lg-c flx-ai-lg-fe d-lg-flx flx-gro-sm-1 flx-gro-lg-0" type="search">
-              <input type="text" id="VisualSearchInput" className="pre-search-input headline-5" name="search" autoComplete="off" data-var="vsInput" tabIndex={0} placeholder="Search" aria-label="Search Products" role="combobox" aria-controls="VisualSearchSuggestionsList" aria-owns="VisualSearchSuggestionsList" aria-expanded="false" />
+              <input onClick={handleVsIsOpen} type="text" id="VisualSearchInput" className="pre-search-input headline-5" name="search" autoComplete="off" data-var="vsInput" tabIndex={0} placeholder="Search" aria-label="Search Products" role="combobox" aria-controls="VisualSearchSuggestionsList" aria-owns="VisualSearchSuggestionsList" aria-expanded="false" />
               <button className="pre-clear-search ncss-btn pr0-sm z2 d-sm-h" data-var="vsClearSearch" aria-label="Reset Search">
                 <svg className="search-clear-icon" fill="#111" height="30px" width="30px" viewBox="0 0 24 24">
                   <path d="M22 20H7.3c-.3 0-.6-.1-.8-.4l-5.3-7c-.3-.4-.3-.9 0-1.2l5.3-7c.2-.3.5-.4.8-.4H22c.6 0 1 .4 1 1v14c0 .6-.4 1-1 1zM7.8 18H21V6H7.8l-4.6 6 4.6 6zm8.2-3c-.3 0-.5-.1-.7-.3L14 13.4l-1.3 1.3c-.4.4-1 .4-1.4 0s-.4-1 0-1.4l1.3-1.3-1.3-1.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.3 1.3 1.3-1.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4L15.4 12l1.3 1.3c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3z" />
@@ -18,7 +18,7 @@ const Search = () => (
                 </svg>
               </button>
             </div>
-            <button type="submit" className="pre-close-search p0-sm z2 d-sm-h" data-var="vsCloseSearch" aria-label="Close Search">
+            <button type="submit" className={closeSearchClassName} onClick={handleVsIsClosed}data-var="vsCloseSearch" aria-label="Close Search">
               <span className="pre-grey-circle">
                 <svg fill="#111" height="30px" width="30px" viewBox="0 0 24 24"><path d="M15.04 12L24 2.96 21.04 0 12 8.96 3.04 0 0 2.96 9.04 12 0 20.96 3.04 24 12 14.96 21.04 24 24 20.96z" /></svg>
               </span>
