@@ -123,7 +123,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   }
 /* End Nike reset */
 
-
 /* Matt's Stolen Nike Classes: */
 /* Z Index: */
 .z1 {
@@ -304,7 +303,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   -ms-flex-direction: column;
   flex-direction: column;
   }
-
 /* Font Styling: */
 .base-font, .body-1, .body-2, .body-3, .body-4, .headline-1, .headline-2, .headline-3, .headline-4, .headline-5, .responsive-body-2-1, .responsive-body-3-2 {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -348,23 +346,11 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   transform: translateY(0);
   transition: opacity .2s,visibility 0s,transform .25s ease;
 }
-
-/* [class*=ncss-col-] {
-  position: relative;
-  min-height: 1px;
-  display: none;
-  font-size: 16px;
-  line-height: 1.75;
-  padding-left: 8px;
-  padding-right: 8px;
-} */
-
 /* Pre-l-header-container (Holds entire header)*/
 .pre-l-header-container {
   width: 100%;
 }
-
-/* Begin Pre brand header container (contains pre brand header, includes jordan, converse and nav bar */
+/* Begin Pre brand header container */
 .pre-l-brand-header {
   position: relative;
   background: #f5f5f5;
@@ -399,8 +385,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       max-width: 1920px;
   }
 }
-/* End Pre-l-wrapper (pads margins/styles pre brand header section) */
-
 /* Begin logo list (Jordan, Converse) */
 @media only screen and (min-width: 640px) {
   .d-md-flx {
@@ -410,9 +394,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       display: flex;
   }
 }
-
-/* End logo list (Jordan, Converse) */
-
 /* Begin Pre brand item */
 .pre-brand-menu .pre-brand-item {
   display: flex;
@@ -420,14 +401,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   height: 100%;
   width: 100%;
 }
-/* End Pre brand item */
-
 /* Begin Pre header Icon anchor */
 .pre-brand-item a, .pre-brand-item button, .pre-btn-header a, .pre-btn-header button, .pre-desktop-menu a, .pre-desktop-menu button, button.nav-btn, button.pre-link {
   background: transparent;
 }
-/* End Pre header Icon anchor */
-
 /* Begin Nav bar container (pre desktop usermenu) */
 @media only screen and (min-width: 640px) {
   .flx-dir-md-r {
@@ -444,8 +421,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       display: flex;
   }
 }
-/* End Nav bar container (pre desktop usermenu) */
-
 /* Begin Help Dropdown container */
 @media only screen and (min-width: 1024px) {
   .d-lg-flx {
@@ -463,8 +438,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       align-items: center;
   }
 }
-/* End Help Dropdown container */
-
 /* Begin pre help dropdown */
 .pre-l-logo {
   opacity: 1;
@@ -474,8 +447,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .pre-help-dropdown {
   height: 100%;
 }
-/* End pre help dropdown */
-
 /* Begin pre drop down menu */
 .pre-help-dropdown>.pre-dropdown-menu {
   display: flex;
@@ -485,8 +456,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   position: relative;
   height: 100%;
 }
-/* End pre drop down menu */
-
 /* Begin pre-help button */
 .pre-help-dropdown .pre-help-button, .pre-help-dropdown .pre-help-dropdown-menu-item:hover {
   color: #111;
@@ -494,8 +463,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .pre-help-dropdown a, .pre-help-dropdown button {
   padding: 4px 8px;
 }
-/* End pre-help button */
-
 /* Begin Help Menu Dropdown MenuBox */
 .pre-help-dropdown .pre-dropdown-menu-box {
   position: absolute;
@@ -511,8 +478,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   transform: translateY(-20px);
   transition: opacity .2s,visibility 0s linear .2s,transform .25s ease;
 }
-/* End Help Menu Dropdown MenuBox */
-
 /* Begin Help Dropdown styling: */
 .pre-dropdown-menu-content {
   background: #fff;
@@ -524,7 +489,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .pre-help-dropdown a, .pre-help-dropdown button {
   padding: 4px 8px;
 }
-
 /* li */
 .pre-help-dropdown .pre-help-dropdown-menu-item {
   display: block;
@@ -597,7 +561,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   height: 34px;
 }
 /* Begin HEADER (contains swoosh icon, usermenu, search, like and cart icons */
-
 /* Header Styling */
 .pre-l-header.top-stack-context {
   z-index: 2;
@@ -732,7 +695,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       padding-left: 12px;
   }
 }
-
 /* Begin pre desktop menu dropdown */
 .pre-desktop-menu-dropdown {
   white-space: nowrap;
@@ -764,7 +726,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   visibility: visible;
   transition: transform .25s ease,opacity 0ms,visibility 0ms;
 }
-
 /* Begin menu column */
 .ncss-row {
   font-size: 0;
@@ -809,8 +770,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .pre-text-color-secondary {
   color: #757575;
 }
-
-
 /* Begin Search */
 /* Begin pre-l-search */
 .pre-l-search {
@@ -1003,7 +962,6 @@ input, textarea {
   height: 12px;
   width: 12px;
 }
-
 /* Begin pre-clear-search button */
 .pre-clear-search.d-sm-h {
   display: none;
@@ -1085,7 +1043,6 @@ button, input[type=button], input[type=reset], input[type=submit] {
   height: 24px;
   width: 24px;
 }
-
 /* Beging pre-l-vs-box */
 .pre-l-vs-box {
   visibility: hidden;
@@ -1267,10 +1224,7 @@ button, input[type=button], input[type=reset], input[type=submit] {
       padding-right: 4px;
   }
 }
-/* End Search */
-
 /* Begin LIKE/CART Container */
-
 /* Header Button Group */
 .flx-gro-sm-1 {
   -webkit-box-flex: 1;
@@ -1301,8 +1255,6 @@ button, input[type=button], input[type=reset], input[type=submit] {
       top: 0;
   }
 }
-/* End Like/Cart Container */
-
 /* Heart Icon Anchor*/
 .ripple:after {
   content: "";
@@ -1320,7 +1272,6 @@ button, input[type=button], input[type=reset], input[type=submit] {
   opacity: 0;
   transition: transform .5s,opacity 1s;
 }
-
 .pre-btn-header {
   vertical-align: middle;
   background: transparent;
@@ -1334,8 +1285,6 @@ button, input[type=button], input[type=reset], input[type=submit] {
   position: relative;
   align-items: center;
 }
-/* End Heart Icon Anchor*/
-
 /* Shopping Cart container */
 .pre-acct-cart {
   position: relative;
@@ -1345,16 +1294,12 @@ button, input[type=button], input[type=reset], input[type=submit] {
       display: inline-flex;
   }
 }
-
 @media only screen and (min-width: 1024px) {
   .mr0-lg {
       margin-right: 0;
   }
 }
-/* End Shopping Cart container */
-
 /* Shopping Cart Anchor */
-
 .icon-btn {
   vertical-align: middle;
   background: transparent;
@@ -1370,14 +1315,11 @@ button, input[type=button], input[type=reset], input[type=submit] {
   position: relative;
   align-items: center;
 }
-
 @media only screen and (min-width: 1024px) {
   .icon-btn {
       padding: 6px;
   }
 }
-/* End Shopping Cart Anchor */
-
 /* Begin Jewel span */
 .pre-cart-jewel {
   top: 11px;
@@ -1395,9 +1337,7 @@ button, input[type=button], input[type=reset], input[type=submit] {
       top: 10px;
   }
 }
-
 /* End HEADER */
-
 /* Pre-Scrim */
 .pre-scrim {
   background-color: hsla(0,0%,7%,.36);
@@ -1547,7 +1487,6 @@ button, input[type=button], input[type=reset], input[type=submit] {
 .css-1ciuivw.next-btn.carousel-btn {
   right: 0px;
 }
-
 .css-v13otb .carousel-btn {
   padding: 0px;
   width: auto;

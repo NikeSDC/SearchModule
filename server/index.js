@@ -11,8 +11,8 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '..', '/client/dist')));
 
-app.get('/api/search/:query', (req, res) => {
-  db.search(req.params.query)
+app.get('/api/search/:search', (req, res) => {
+  db.search(req.params.search)
     .then((data) => res.status(200).send(data))
     .catch((err) => res.status(400).send(err));
 });

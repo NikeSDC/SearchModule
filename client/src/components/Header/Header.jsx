@@ -19,7 +19,6 @@ class Header extends React.Component {
   }
 
   handleVsIsOpen() {
-    console.log('vs-is-open')
     this.openScrim()
     this.setState({
       preLBrandHeaderClassName: 'pre-l-brand-header d-sm-h d-lg-b z3 vs-is-open',
@@ -29,7 +28,6 @@ class Header extends React.Component {
   }
 
   handleVsIsClosed() {
-    console.log('vs-is-closed')
     this.closeScrim()
     this.setState({
       preLBrandHeaderClassName: 'pre-l-brand-header d-sm-h d-lg-b z3',

@@ -7,9 +7,9 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: '387ee6b0-066a-402c-98ba-bf424fc88468',
+      search: '',
       searchResults: [{
-        id: '',
+        id: '387ee6b0-066a-402c-98ba-bf424fc88468',
         name: 'Liverpool FC',
         shoe: `Men's Woven Track Jacket`,
         colorway: 'Blush/Red/Blue',
@@ -17,7 +17,6 @@ class Search extends React.Component {
         media: {
           imageUrl: "https://static.nike.com/a/images/t_default/5c97a3f5-02b7-400b-b62e-96714eb8b6aa/liverpool-fc-mens-woven-track-jacket-zKhhq9.jpg"
         }
-
       },],
       visualSearchClassName: 'pre-l-search',
       visualSearchPopularTermsClassName: 'pre-l-vs-popular pl9-sm pr5-sm prl0-lg mauto-sm',
@@ -26,17 +25,29 @@ class Search extends React.Component {
       vsPopularTermsClassName: 'pre-l-vs-popular pl9-sm pr5-sm prl0-lg mauto-sm',
     }
     this.handleInput = this.handleInput.bind(this);
+    this.searchDatabase = this.searchDatabase.bind(this);
     this.whenTextToggle = this.whenTextToggle.bind(this);
   }
 
   handleInput(e) {
     this.setState({
       [e.target.name]: e.target.value,
-    }, this.whenTextToggle())
+    }, () => {
+      this.whenTextToggle()
+      this.searchDatabase()
+      console.log(this.state.searchResults)
+    })
+  }
+
+  searchDatabase() {
+    Axios.get(`/api/search/${this.state.search}`)
+      .then((res) => this.setState({
+        searchResults: res.data
+      }))
+      .catch((err) => console.error(err))
   }
 
   whenTextToggle() {
-    console.log(this.state.search)
     if (this.state.search.length <= 1) {
       this.setState({
         visualSearchClassName: 'pre-l-search',
@@ -76,8 +87,8 @@ class Search extends React.Component {
                 </svg>
               </button>
             </div>
-            <button type="submit" className={this.props.closeSearchClassName} onClick={this.props.handleVsIsOpen}data-var="vsCloseSearch" aria-label="Close Search">
-              <span className="pre-grey-circle">
+            <button type="submit" className={this.props.closeSearchClassName} onClick={this.props.handleVsIsClosed} data-var="vsCloseSearch" aria-label="Close Search">
+              <span className="pre-grey-circle" >
                 <svg fill="#111" height="30px" width="30px" viewBox="0 0 24 24"><path d="M15.04 12L24 2.96 21.04 0 12 8.96 3.04 0 0 2.96 9.04 12 0 20.96 3.04 24 12 14.96 21.04 24 24 20.96z" /></svg>
               </span>
             </button>
@@ -118,7 +129,6 @@ class Search extends React.Component {
               <div className="pre-spinner d-sm-h" data-var="vsSpinner" /></div>
             <span aria-live="polite" data-var="visualSearchResultsCount" className="pre-visually-hidden">{this.state.searchResults.length}</span>
             <ResultList VisualSearchResultsClassName={this.state.VisualSearchResultsClassName} searchResults={this.state.searchResults}/>
-            {/* <ul className={this.state.VisualSearchResultsClassName} data-var="VisualSearchResults" data-pre="VisualSearchResults" /> */}
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const ResultInstance = ({ currentResult }) => (
           <img className="u-full-width" src={currentResult.media.imageUrl} alt="Liverpool FC" data-var="vsProductImg" />
         </div>
         <figcaption className="va-sm-m mt3-sm mb8-sm mb0-lg prl3-sm pl0-lg pr3-lg body-3">
-          <h4 className="u-bold">{currentResult.name}</h4>
+          <h4 className="u-bold">{currentResult.shoe}</h4>
           <p className="text-color-secondary">{currentResult.colorway}</p>
           <p className="pre-vs-price u-bold pt3-sm">${currentResult.retailPrice}</p>
         </figcaption>
