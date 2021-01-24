@@ -47,6 +47,9 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 40px; */
 }
+ .mouse-focus button, .mouse-focus input[type=button], .mouse-focus input[type=reset], .mouse-focus input[type=submit] {
+  outline: 0;
+}
 ol, ul {
   list-style: none;
 }
@@ -846,6 +849,11 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       padding: 0 16px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .vs-is-open .pre-l-search.pre-overlay-expanded {
+      height: calc(25vw + 207px);
+  }
+}
 /* Begin pre-l-search-box */
 .pre-l-search-box {
   padding-top: 0;
@@ -1175,6 +1183,10 @@ button, input[type=button], input[type=reset], input[type=submit] {
       flex-direction: row;
   }
 }
+.pre-l-vs-box {
+  visibility: hidden;
+  padding-top: 48px;
+}
 /* Begin pre-l-vs-suggestions */
 .pre-l-vs-suggestions {
   margin-right: 16px;
@@ -1230,8 +1242,6 @@ button, input[type=button], input[type=reset], input[type=submit] {
   width: 1px;
 }
 /* Begin Visual Search Results */
-
-
 @media only screen and (min-width: 1024px) {
   .pre-l-vs-results {
       width: calc(100% - 100px);
@@ -1243,6 +1253,18 @@ button, input[type=button], input[type=reset], input[type=submit] {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .pre-l-vs-results li {
+      width: 20%;
+      padding: 0 4px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .pre-l-vs-results li:first-of-type {
+      padding-left: 0;
+      padding-right: 4px;
   }
 }
 /* End Search */
@@ -1589,4 +1611,23 @@ button, input[type=button], input[type=reset], input[type=submit] {
 .css-1ciuivw .icon svg {
   width: 14px;
   height: 14px;
+}
+/* Begin Spinner */
+.pre-spinner {
+  animation-name: e;
+}
+.pre-spinner {
+  margin: 5px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border: 2px solid #000;
+  transform: translateZ(0);
+  animation: c 1s infinite linear;
+}
+.pre-spinner, .pre-spinner:after {
+  position: relative;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
 }

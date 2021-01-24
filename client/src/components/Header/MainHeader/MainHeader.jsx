@@ -3,7 +3,7 @@ import React from 'react';
 import Swoosh from './Swoosh/Swoosh.jsx';
 // import PreMobileMenu from './Menu/PreMobileMenu.jsx';
 import PreDesktopMenu from './Menu/PreDesktopMenu.jsx';
-import Search from './Menu/Search.jsx';
+import Search from './Menu/Search/Search.jsx';
 import LikeCart from './LikeCart/LikeCart.jsx';
 
 const MainHeader = ({ openScrim, closeScrim, handleVsIsOpen, handleVsIsClosed, headerClassName, closeSearchClassName }) => (
