@@ -8,34 +8,29 @@ class Search extends React.Component {
     super(props);
     this.state = {
       search: '',
-      searchResults: [{
-        id: '387ee6b0-066a-402c-98ba-bf424fc88468',
-        name: 'Liverpool FC',
-        shoe: `Men's Woven Track Jacket`,
-        colorway: 'Blush/Red/Blue',
-        retailPrice: 90,
-        media: {
-          imageUrl: "https://static.nike.com/a/images/t_default/5c97a3f5-02b7-400b-b62e-96714eb8b6aa/liverpool-fc-mens-woven-track-jacket-zKhhq9.jpg"
-        }
-      },],
+      searchResults: [],
       visualSearchClassName: 'pre-l-search',
       visualSearchPopularTermsClassName: 'pre-l-vs-popular pl9-sm pr5-sm prl0-lg mauto-sm',
       visualSearchOverlayClassName: 'pre-l-vs-overlay bg-white u-full-width flx-dir-lg-r z1 d-sm-h',
       VisualSearchResultsClassName: 'pre-l-vs-results bg-white pt12-sm pt0-lg mb12-sm d-sm-flx flx-dir-sm-r flx-wr-sm-w flx-wr-lg-nw d-sm-h',
       vsPopularTermsClassName: 'pre-l-vs-popular pl9-sm pr5-sm prl0-lg mauto-sm',
+      preClearSearchClassName: 'pre-clear-search ncss-btn pr0-sm z2 d-sm-h',
     }
     this.handleInput = this.handleInput.bind(this);
     this.searchDatabase = this.searchDatabase.bind(this);
     this.whenTextToggle = this.whenTextToggle.bind(this);
+    this.whenQueryTextToggle = this.whenQueryTextToggle.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   handleInput(e) {
     this.setState({
       [e.target.name]: e.target.value,
     }, () => {
-      this.whenTextToggle()
+      this.whenQueryTextToggle()
       this.searchDatabase()
-      console.log(this.state.searchResults)
+      this.whenTextToggle()
+      // console.log(this.state.searchResults)
     })
   }
 
@@ -47,8 +42,30 @@ class Search extends React.Component {
       .catch((err) => console.error(err))
   }
 
+  whenQueryTextToggle() {
+    if (this.state.search.length < 1) {
+      this.setState({
+        preClearSearchClassName: 'pre-clear-search ncss-btn pr0-sm z2 d-sm-h'
+      })
+    } else {
+      this.setState({
+        preClearSearchClassName: 'pre-clear-search ncss-btn pr0-sm z2'
+      })
+    }
+  }
+
+  handleClear(e) {
+    e.preventDefault();
+    document.getElementById('VisualSearchInput').value = '';
+    this.props.handleVsIsClosed();
+    this.setState({
+      search: '',
+      searchResults: [],
+    })
+  }
+
   whenTextToggle() {
-    if (this.state.search.length <= 1) {
+    if (this.state.searchResults.length <= 1) {
       this.setState({
         visualSearchClassName: 'pre-l-search',
         visualSearchPopularTermsClassName: 'pre-l-vs-popular pl9-sm pr5-sm prl0-lg mauto-sm',
@@ -76,18 +93,18 @@ class Search extends React.Component {
           <div className="pre-search-contain">
             <div className="pre-search-input-box d-sm-b flx-dir-lg-c flx-ai-lg-fe d-lg-flx flx-gro-sm-1 flx-gro-lg-0" type="search">
               <input onClick={this.props.handleVsIsOpen} type="text" id="VisualSearchInput" onChange={this.handleInput} className="pre-search-input headline-5" name="search" autoComplete="off" data-var="vsInput" tabIndex={0} placeholder="Search" aria-label="Search Products" role="combobox" aria-controls="VisualSearchSuggestionsList" aria-owns="VisualSearchSuggestionsList" aria-expanded="false" />
-              <button className="pre-clear-search ncss-btn pr0-sm z2 d-sm-h" data-var="vsClearSearch" aria-label="Reset Search">
+              <button className={this.state.preClearSearchClassName} data-var="vsClearSearch" aria-label="Reset Search">
                 <svg className="search-clear-icon" fill="#111" height="30px" width="30px" viewBox="0 0 24 24">
                   <path d="M22 20H7.3c-.3 0-.6-.1-.8-.4l-5.3-7c-.3-.4-.3-.9 0-1.2l5.3-7c.2-.3.5-.4.8-.4H22c.6 0 1 .4 1 1v14c0 .6-.4 1-1 1zM7.8 18H21V6H7.8l-4.6 6 4.6 6zm8.2-3c-.3 0-.5-.1-.7-.3L14 13.4l-1.3 1.3c-.4.4-1 .4-1.4 0s-.4-1 0-1.4l1.3-1.3-1.3-1.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.3 1.3 1.3-1.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4L15.4 12l1.3 1.3c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3z" />
                 </svg>
               </button>
-              <button className="pre-search-btn ripple" data-var="vsButton" aria-label="Search">
+              <button className="pre-search-btn ripple" data-var="vsButton" onClick={this.props.handleVsIsOpen} aria-label="Search">
                 <svg className="pre-search-input-icon" fill="#111" height="30px" width="30px" viewBox="0 0 24 24">
                   <path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z" />
                 </svg>
               </button>
             </div>
-            <button type="submit" className={this.props.closeSearchClassName} onClick={this.props.handleVsIsClosed} data-var="vsCloseSearch" aria-label="Close Search">
+            <button type="submit" className={this.props.closeSearchClassName} onClick={this.handleClear} data-var="vsCloseSearch" aria-label="Close Search">
               <span className="pre-grey-circle" >
                 <svg fill="#111" height="30px" width="30px" viewBox="0 0 24 24"><path d="M15.04 12L24 2.96 21.04 0 12 8.96 3.04 0 0 2.96 9.04 12 0 20.96 3.04 24 12 14.96 21.04 24 24 20.96z" /></svg>
               </span>

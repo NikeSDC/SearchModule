@@ -303,6 +303,11 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   -ms-flex-direction: column;
   flex-direction: column;
   }
+/* Input Focus:  */
+input:focus, textarea:focus, select:focus, .btn:focus{
+  outline: none;
+}
+
 /* Font Styling: */
 .base-font, .body-1, .body-2, .body-3, .body-4, .headline-1, .headline-2, .headline-3, .headline-4, .headline-5, .responsive-body-2-1, .responsive-body-3-2 {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -680,6 +685,17 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       display: inline-block;
   }
 }
+@media only screen and (max-width: 1170px) {
+  .sale {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1115px) {
+  .customize {
+    display: none;
+  }
+}
+
 /* Begin pre-dektop-menu-link */
 .pre-desktop-menu-link {
   border-bottom: 2px solid transparent;
@@ -966,8 +982,11 @@ input, textarea {
 .pre-clear-search.d-sm-h {
   display: none;
 }
-.mouse-focus button, .mouse-focus input[type=button], .mouse-focus input[type=reset], .mouse-focus input[type=submit] {
-  outline: 0;
+.vs-is-open .pre-clear-search {
+  display: inline-flex;
+}
+.vs-is-open .pre-clear-search.d-sm-h {
+  display: none;
 }
 .pre-clear-search {
   position: absolute;

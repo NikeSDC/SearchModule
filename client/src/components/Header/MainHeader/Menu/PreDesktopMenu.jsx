@@ -10,8 +10,8 @@ class PreDesktopMenu extends React.Component {
       menClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
       womenClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
       kidsClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
-      customizeClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header',
-      saleClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+      customizeClassName: 'pre-desktop-menu-item customize d-lg-ib is-static is-header',
+      saleClassName: 'pre-desktop-menu-item sale d-lg-ib d-sm-h is-static is-header'
     }
     this.newReleaseEnter = this.newReleaseEnter.bind(this);
     this.newReleaseLeave = this.newReleaseLeave.bind(this);
@@ -95,7 +95,7 @@ class PreDesktopMenu extends React.Component {
     this.props.openScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu is-open',
-      customizeClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
+      customizeClassName: 'pre-desktop-menu-item customize d-lg-ib is-static is-header is-focused'
     })
   }
 
@@ -103,14 +103,14 @@ class PreDesktopMenu extends React.Component {
     this.props.closeScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu',
-      customizeClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+      customizeClassName: 'pre-desktop-menu-item customize d-lg-ib is-static is-header'
     })
   }
   saleEnter() {
     this.props.openScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu is-open',
-      saleClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header is-focused'
+      saleClassName: 'pre-desktop-menu-item sale d-lg-ib d-sm-h is-static is-header is-focused'
     })
   }
 
@@ -118,7 +118,7 @@ class PreDesktopMenu extends React.Component {
     this.props.closeScrim()
     this.setState({
       ulMenuClassName: 'pre-desktop-menu',
-      saleClassName: 'pre-desktop-menu-item d-lg-ib is-static is-header'
+      saleClassName: 'pre-desktop-menu-item sale d-lg-ib d-sm-h is-static is-header'
     })
   }
 
