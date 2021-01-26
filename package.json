@@ -20,12 +20,14 @@
   "homepage": "https://github.com/Just-Do-It-41/header--Matthew#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "css-loader": "^5.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.11.13",
     "morgan": "^1.10.0",
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "style-loader": "^2.0.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

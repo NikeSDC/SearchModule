@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const db = require('../db/models.js');
 
 const app = express();
-const port = 3042;
+const port = 3001;
 
 app.use(morgan('dev'));
 app.use(express.json());

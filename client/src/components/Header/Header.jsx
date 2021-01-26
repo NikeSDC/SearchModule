@@ -2,6 +2,7 @@ import React from 'react';
 
 import PreLHeader from './PreLHeader/PreLHeader.jsx';
 import MainHeader from './MainHeader/MainHeader.jsx';
+import Banner from './Banner/Banner.jsx';
 
 class Header extends React.Component {
   constructor(props) {
@@ -62,6 +63,7 @@ class Header extends React.Component {
         <div className="pre-spacer"></div>
         <div className={this.state.scrimClassName} onClick={this.handleVsIsClosed} data-pre="Scrim"></div>
         <div id="skip-to-content"></div>
+        <Banner />
       </div>
     );
   }
