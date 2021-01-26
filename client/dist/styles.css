@@ -48,53 +48,6 @@ ul {
 ol, ul {
   list-style: none;
 }
-input {
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: -internal-light-dark(black, white);
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  appearance: textfield;
-  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  margin: 0em;
-  font: 400 13.3333px Arial;
-  padding: 1px 2px;
-  border-width: 2px;
-  border-style: inset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
-}
-button {
-    appearance: button;
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: -internal-light-dark(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
-    box-sizing: border-box;
-    margin: 0em;
-    font: 400 13.3333px Arial;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-}
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -346,6 +299,11 @@ input:focus, textarea:focus, select:focus, .btn:focus{
   transform: translateY(0);
   transition: opacity .2s,visibility 0s,transform .25s ease;
 }
+/* a:-webkit-any-link {
+  color: none;
+  cursor: pointer;
+  text-decoration: none;
+} */
 /* Pre-l-header-container (Holds entire header)*/
 .pre-l-header-container {
   width: 100%;
@@ -1405,40 +1363,40 @@ button, input[type=button], input[type=reset], input[type=submit] {
   overflow-x: visible;
 }
 /* Carousel UL: */
-.css-v13otb > .slider {
+.css-v13otb > .sliderBanner {
   display: grid;
   grid-template-columns: repeat(2, 100%);
   grid-gap: var(--grid-gap,4px);
 }
-.css-v13otb > .slider {
+.css-v13otb > .sliderBanner {
   display: flex;
   transform: translate3d(0px, 0px, 0px);
   transition: all 350ms ease-in-out 0s;
 }
-.css-kswtif > .slider {
+.css-kswtif > .sliderBanner {
   display: grid;
   grid-template-columns: repeat(2, 100%);
   grid-gap: var(--grid-gap,4px);
 }
-.css-kswtif > .slider {
+.css-kswtif > .sliderBanner {
   display: flex;
   transform: translate3d(-772px, 0px, 0px);
   transition: all 350ms ease-in-out 0s;
 }
 /* Carousel li */
-.css-v13otb > .slider > * {
+.css-v13otb > .sliderBanner > * {
   display: inline-block;
 }
-.css-v13otb > .slider > * {
+.css-v13otb > .sliderBanner > * {
   flex-flow: column;
   flex: 1 0 100%;
   min-width: 100%;
   padding: 0px calc(2px);
 }
-.css-kswtif > .slider > * {
+.css-kswtif > .sliderBanner > * {
   display: inline-block;
 }
-.css-kswtif > .slider > * {
+.css-kswtif > .sliderBanner > * {
   flex-flow: column;
   flex: 1 0 100%;
   min-width: 100%;

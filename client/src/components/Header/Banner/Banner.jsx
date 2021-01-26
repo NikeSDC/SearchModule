@@ -39,7 +39,7 @@ class Banner extends React.Component {
         <div className="banner-container css-1dixged">
           <div className="banner-carousel-wrapper css-196tcw2 css-1yoeq20">
             <div className={this.state.currentSlide} data-orientation="horizontal" data-hero="true" data-slides-to-show="1" data-scrollable="false" data-should-transition="true" data-semantically-hide-unobserved-cards="true" data-conditionally-hide-nav-buttons="false" data-with-tracker="false" data-with-navigation="true" autoPlay="" id="">
-              <ul className="slider">
+              <ul className="sliderBanner">
                 <li aria-hidden="true" data-in-view="false" data-index="0" className={this.state.slide1}>
                   <div className="banner-node css-gb9zhi">
                     <span className="banner-title css-1w68kum">Save Up to 40%</span>

@@ -1,8 +1,10 @@
 # header--Matthew
 Header and possibly footer
 
-To seed database:
-Run $node db/seed.js
+Run:
+$npm install
+$node db/seed.js
+$npm start
 
-$npm start (to start server)
-$npm build (to start webpack)
+Endpoint for proxy:
+'/search/:search'
