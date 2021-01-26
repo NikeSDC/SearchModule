@@ -41,11 +41,6 @@ li {
 }
 ul {
   display: block;
-  /* margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px; */
 }
  .mouse-focus button, .mouse-focus input[type=button], .mouse-focus input[type=reset], .mouse-focus input[type=submit] {
   outline: 0;
@@ -108,10 +103,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   font: inherit;
   vertical-align: baseline;
 }
-::-webkit-input-placeholder { /* Edge */
+::-webkit-input-placeholder {
   color:#d1d1d1;
 }
-:-ms-input-placeholder { /* Internet Explorer */
+:-ms-input-placeholder {
   color:#d1d1d1;
 }
 ::placeholder {
