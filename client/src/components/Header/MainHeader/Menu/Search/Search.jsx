@@ -139,7 +139,7 @@ class Search extends React.Component {
           </div>
           <div className={this.state.visualSearchOverlayClassName} data-var="VisualSearchOverlay" data-pre="VisualSearchOverlay">
             <div className="pre-l-vs-suggestions va-sm-t pl9-sm pr5-sm pl0-lg flx-dir-sm-c">
-              <p className="headline-5 text-color-secondary pb4-sm"><span id="hf_header_label_search_topSuggestions">Top Suggestions</span></p>
+              <p className="headline-5 text-color-secondary pb4-sm"><span id="hf_header_label_search_topSuggestions"></span></p>
               <ul id="VisualSearchSuggestionsList" data-var="vsSuggestionList" role="listbox" data-pre="VisualSearchSuggestionList" />
             </div>
             <div className="pre-vs-spinner">
