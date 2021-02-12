@@ -10,7 +10,7 @@ const ResultInstance = ({ currentResult }) => (
         <figcaption className="va-sm-m mt3-sm mb8-sm mb0-lg prl3-sm pl0-lg pr3-lg body-3">
           <h4 className="u-bold">{currentResult.shoe_name}</h4>
           <p className="text-color-secondary">{currentResult.shoe_subname}</p>
-          <p className="pre-vs-price u-bold pt3-sm">${currentResult.shoe_price}</p>
+          <p className="pre-vs-price u-bold pt3-sm">{currentResult.shoe_price}</p>
         </figcaption>
       </figure>
     </a>
